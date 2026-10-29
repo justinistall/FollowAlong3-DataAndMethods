@@ -8,6 +8,45 @@ package part10;
 //
 // There is no main method here yet. Typing it is part of the stretch.
 
+
+
+
 public class Stretch {
 
+    public static void main(String[] args) {
+
+        // STRETCH A - ARRAYS
+
+        // Make an array with five numbers
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        // Print all numbers using a loop
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+
+        // STRETCH B - 2D ARRAYS
+
+        // Make a 2D array with three rows
+        int[][] grid = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        // Loop through each row
+        for (int row = 0; row < grid.length; row++) {
+
+            // Loop through each number in the row
+            for (int col = 0; col < grid[row].length; col++) {
+
+                // Print each number
+                System.out.print(grid[row][col] + " ");
+            }
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
 }
+
