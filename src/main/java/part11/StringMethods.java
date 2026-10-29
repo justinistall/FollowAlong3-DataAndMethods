@@ -14,6 +14,62 @@ package part11;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
+
+
+
 public class StringMethods {
 
+    // Start the program
+    public static void main(String[] args) {
+
+        // Make a String variable
+        String name = "Justin Halstead";
+
+        // Print how many characters are in the String
+        System.out.println(name.length());
+
+        // Print the first character
+        System.out.println(name.charAt(0));
+
+        // Find the position of the letter H
+        System.out.println(name.indexOf("H"));
+
+        // Find the last position of the letter a
+        System.out.println(name.lastIndexOf("a"));
+
+        // Make all the letters uppercase
+        System.out.println(name.toUpperCase());
+
+        // Make all the letters lowercase
+        System.out.println(name.toLowerCase());
+
+        // Remove extra spaces from a String
+        String text = "  Hello World  ";
+        System.out.println(text.trim());
+
+        // Replace a letter with another letter
+        System.out.println(name.replace("a", "o"));
+
+        // Check if the String is empty
+        System.out.println(name.isEmpty());
+
+        // Check if the String contains Justin
+        System.out.println(name.contains("Justin"));
+
+        // Check if the String starts with Justin
+        System.out.println(name.startsWith("Justin"));
+
+        // Check if the String ends with Halstead
+        System.out.println(name.endsWith("Halstead"));
+
+        // Get the first six characters
+        System.out.println(name.substring(0, 6));
+
+        // Check if two Strings are the same
+        System.out.println(name.equals("Justin Halstead"));
+
+        // Compare two Strings without checking capitals
+        System.out.println(name.equalsIgnoreCase("justin halstead"));
+    }
 }
+
