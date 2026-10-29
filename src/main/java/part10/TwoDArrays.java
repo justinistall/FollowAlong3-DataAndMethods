@@ -13,6 +13,42 @@ package part10;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
+
+
+
 public class TwoDArrays {
 
+    // Start the program
+    public static void main(String[] args) {
+
+        // Create a 2D array with 3 rows and 3 columns
+        String[][] cars = {
+                {"Camaro", "Corvette", "Silverado"},
+                {"Mustang", "Ranger", "F-150"},
+                {"Ferrari", "Lambo", "Tesla"}
+        };
+
+        // Print the first car in the first row
+        System.out.println(cars[0][0]);
+
+        // Print the second car in the second row
+        System.out.println(cars[1][1]);
+
+        // Change the first car to a Honda
+        cars[0][0] = "Honda";
+
+        // Go through each row in the array
+        for (int i = 0; i < cars.length; i++) {
+
+            // Go through each column in that row
+            for (int j = 0; j < cars[i].length; j++) {
+
+                // Print the car with a space
+                System.out.print(cars[i][j] + " ");
+            }
+
+            // Move to the next line after each row
+            System.out.println();
+        }
+    }
 }
