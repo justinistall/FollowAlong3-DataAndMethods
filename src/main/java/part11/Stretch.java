@@ -8,6 +8,63 @@ package part11;
 //
 // There is no main method here yet. Typing it is part of the stretch.
 
+
+
+
 public class Stretch {
 
+    public static void main(String[] args) {
+
+        // STRETCH A - STRING METHODS
+
+        // Create a String variable
+        String name = "Justin Halstead";
+
+        // Print the name in uppercase
+        System.out.println(name.toUpperCase());
+
+        // Print the name in lowercase
+        System.out.println(name.toLowerCase());
+
+        // Print the first letter of the name
+        System.out.println(name.charAt(0));
+
+        // Print how many characters are in the name
+        System.out.println(name.length());
+
+        // Replace Justin with John
+        System.out.println(name.replace("Justin", "John"));
+
+        // Print the first name only
+        System.out.println(name.substring(0, 6));
+
+        // STRETCH B - WRAPPER CLASSES
+
+        // Convert a String to an int
+        int age = Integer.parseInt("20");
+
+        // Convert a String to a double
+        double price = Double.parseDouble("15.50");
+
+        // Create an Integer wrapper object
+        Integer number = 100;
+
+        // Convert the Integer into a regular int
+        int regularNumber = number;
+
+        // Print the age
+        System.out.println(age);
+
+        // Print the price
+        System.out.println(price);
+
+        // Print the regular number
+        System.out.println(regularNumber);
+
+        // Convert the age into a String
+        String ageText = Integer.toString(age);
+
+        // Print the converted String
+        System.out.println(ageText);
+    }
 }
