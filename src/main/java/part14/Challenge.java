@@ -8,30 +8,40 @@ package part14;
 // this part's topic: overloading.) Then run ChallengeTest until every test is green.
 // Change only the lines marked YOUR CODE.
 
+
+
 public class Challenge {
 
-    // Wrap text in an HTML tag with the given name.
-    // tag("b", "hi")     should return "<b>hi</b>"
-    // tag("i", "Yay")    should return "<i>Yay</i>"
-    // tag("h1", "Menu")  should return "<h1>Menu</h1>"
+    // Wrap text inside an HTML tag
     public static String tag(String name, String text) {
-        return "";   // YOUR CODE
+        return "<" + name + ">" + text + "</" + name + ">";
     }
 
-    // The same name, but only ONE input. Always use the tag "b".
-    // tag("hi")    should return "<b>hi</b>"
-    // tag("Wow")   should return "<b>Wow</b>"
+    // Use the bold HTML tag
     public static String tag(String text) {
-        return "";   // YOUR CODE
+        return tag("b", text);
     }
 
-    // Turn a number into money: a dollar sign and exactly 2 digits after the point.
-    // money(3.5)      should return "$3.50"
-    // money(0)        should return "$0.00"
-    // money(19.999)   should return "$20.00"
-    // Hint: String.format works exactly like printf, but it RETURNS the text
-    //       instead of printing it.
+    // Format a number as money
     public static String money(double amount) {
-        return "";   // YOUR CODE
+        return String.format(java.util.Locale.US, "$%.2f", amount);
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+
+        // Test tag with two inputs
+        System.out.println(tag("b", "hi"));
+        System.out.println(tag("i", "Yay"));
+        System.out.println(tag("h1", "Menu"));
+
+        // Test tag with one input
+        System.out.println(tag("hi"));
+        System.out.println(tag("Wow"));
+
+        // Test money
+        System.out.println(money(3.5));
+        System.out.println(money(0));
+        System.out.println(money(19.999));
     }
 }
