@@ -8,17 +8,43 @@ package part11;
 // A test in src/test/java/part11/ChallengeTest.java checks your answers.
 // Change ONLY the lines marked YOUR CODE. Do not change the test file.
 
+
+
+
+
+
+
 public class Challenge {
 
-    // initials("jordan", "smith") should return "J.S."
-    // initials("Ada", "Lovelace") should return "A.L."
+    // Return the first letters as uppercase initials
     public static String initials(String first, String last) {
-        return "";   // YOUR CODE
+
+        return first.substring(0, 1).toUpperCase() + "."
+                + last.substring(0, 1).toUpperCase() + ".";
     }
 
-    // swapEnds("code") should return "eodc"
-    // swapEnds("a")    should return "a"    (shorter than 2 letters: give it back unchanged)
+    // Swap the first and last letters
     public static String swapEnds(String s) {
-        return "";   // YOUR CODE
+
+        if (s.length() < 2) {
+            return s;
+        }
+
+        return s.charAt(s.length() - 1)
+                + s.substring(1, s.length() - 1)
+                + s.charAt(0);
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+
+        // Test initials
+        System.out.println(initials("jordan", "smith"));
+        System.out.println(initials("Ada", "Lovelace"));
+
+        // Test swapEnds
+        System.out.println(swapEnds("code"));
+        System.out.println(swapEnds("a"));
+        System.out.println(swapEnds("hello"));
     }
 }
