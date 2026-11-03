@@ -8,18 +8,51 @@ package part13;
 // A test in src/test/java/part13/ChallengeTest.java checks your answers.
 // Change ONLY the lines marked YOUR CODE. Do not change the test file.
 
+
+
+
 public class Challenge {
 
-    // sign(5)  should return "positive"
-    // sign(-3) should return "negative"
-    // sign(0)  should return "zero"
+    // Check if a number is positive, negative, or zero
     public static String sign(int n) {
-        return "";   // YOUR CODE
+
+        if (n > 0) {
+            return "positive";
+        } else if (n < 0) {
+            return "negative";
+        } else {
+            return "zero";
+        }
     }
 
-    // closerTo10(8, 13) should return 8    (8 is 2 away from 10, 13 is 3 away)
-    // closerTo10(8, 12) should return 0    (a tie: both are 2 away)
+    // Find which number is closer to 10
     public static int closerTo10(int a, int b) {
-        return 0;   // YOUR CODE
+
+        // Find the distance of each number from 10
+        int distanceA = Math.abs(a - 10);
+        int distanceB = Math.abs(b - 10);
+
+        // Return the closer number or zero if tied
+        if (distanceA < distanceB) {
+            return a;
+        } else if (distanceB < distanceA) {
+            return b;
+        } else {
+            return 0;
+        }
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+
+        // Test sign
+        System.out.println(sign(5));
+        System.out.println(sign(-3));
+        System.out.println(sign(0));
+
+        // Test closerTo10
+        System.out.println(closerTo10(8, 13));
+        System.out.println(closerTo10(8, 12));
+        System.out.println(closerTo10(15, 9));
     }
 }
