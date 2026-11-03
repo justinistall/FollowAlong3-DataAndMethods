@@ -10,22 +10,48 @@ package part10;
 // Each method already has its top line. The inputs are in the parentheses.
 // Replace the line marked YOUR CODE so the method returns the right answer.
 
+
+
+
+
+
 public class Challenge {
 
-    // Return true if the FIRST or the LAST number in the array equals target.
-    // The array always has at least one number.
-    // endsWith(new int[] {7, 2, 3}, 7)  should return true   (first is 7)
-    // endsWith(new int[] {1, 2, 9}, 9)  should return true   (last is 9)
-    // endsWith(new int[] {1, 5, 3}, 5)  should return false  (5 is only in the middle)
+    // Check if the first or last number matches target
     public static boolean endsWith(int[] nums, int target) {
-        return false;   // YOUR CODE
+
+        // Check the first and last number
+        return nums[0] == target || nums[nums.length - 1] == target;
     }
 
-    // Return the total: all the numbers in the array added up.
-    // total(new int[] {1, 2, 3})  should return 6
-    // total(new int[] {10})       should return 10
-    // total(new int[] {})         should return 0   (an empty array adds up to 0)
+    // Add all the numbers in the array
     public static int total(int[] nums) {
-        return 0;   // YOUR CODE
+
+        // Start the total at zero
+        int sum = 0;
+
+        // Go through every number in the array
+        for (int i = 0; i < nums.length; i++) {
+
+            // Add each number to the total
+            sum += nums[i];
+        }
+
+        // Return the final total
+        return sum;
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+
+        // Test endsWith
+        System.out.println(endsWith(new int[]{7, 2, 3}, 7));
+        System.out.println(endsWith(new int[]{1, 2, 9}, 9));
+        System.out.println(endsWith(new int[]{1, 5, 3}, 5));
+
+        // Test total
+        System.out.println(total(new int[]{1, 2, 3}));
+        System.out.println(total(new int[]{10}));
+        System.out.println(total(new int[]{}));
     }
 }
