@@ -10,17 +10,73 @@ import java.util.ArrayList;
 // A test in src/test/java/part12/ChallengeTest.java checks your answers.
 // Change ONLY the lines marked YOUR CODE. Do not change the test file.
 
+
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Challenge {
 
-    // countEvens([2, 1, 2, 3, 4]) should return 3
-    // countEvens([1, 3, 5])       should return 0
+    // Count how many even numbers are in the list
     public static int countEvens(ArrayList<Integer> nums) {
-        return 0;   // YOUR CODE
+
+        // Start counting at zero
+        int count = 0;
+
+        // Go through each number
+        for (int num : nums) {
+
+            // Check if the number is even
+            if (num % 2 == 0) {
+                count++;
+            }
+        }
+
+        // Return the number of even numbers
+        return count;
     }
 
-    // spread([3, 9, 2, 5]) should return 7   (biggest 9 minus smallest 2)
-    // spread([42])         should return 0
+    // Find the difference between biggest and smallest
     public static int spread(ArrayList<Integer> nums) {
-        return 0;   // YOUR CODE
+
+        // Start with the first number
+        int biggest = nums.get(0);
+        int smallest = nums.get(0);
+
+        // Go through each number
+        for (int num : nums) {
+
+            // Find the biggest number
+            if (num > biggest) {
+                biggest = num;
+            }
+
+            // Find the smallest number
+            if (num < smallest) {
+                smallest = num;
+            }
+        }
+
+        // Return the difference
+        return biggest - smallest;
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+
+        // Test countEvens
+        System.out.println(countEvens(
+                new ArrayList<>(Arrays.asList(2, 1, 2, 3, 4))));
+
+        System.out.println(countEvens(
+                new ArrayList<>(Arrays.asList(1, 3, 5))));
+
+        // Test spread
+        System.out.println(spread(
+                new ArrayList<>(Arrays.asList(3, 9, 2, 5))));
+
+        System.out.println(spread(
+                new ArrayList<>(Arrays.asList(42))));
     }
 }
